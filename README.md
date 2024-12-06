@@ -28,7 +28,7 @@ Some appliable references:
 </center>
 [3] Tang J, LeBel A, Jain S, Huth AG. Semantic reconstruction of continuous language from non-invasive brain recordings. Nat Neurosci. 2023 May;26(5):858-866. doi: 10.1038/s41593-023-01304-9. Epub 2023 May 1. PMID: 37127759; PMCID: PMC11304553.
 
-![Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result|200|center](figure/Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result.png)
+![Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result|200](figure/Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result.png)
 
 <center>
 
