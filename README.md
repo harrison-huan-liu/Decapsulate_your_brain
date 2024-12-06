@@ -6,6 +6,7 @@ In this project, I aim to present comprehensive visualization tools for revealin
 The rudimentary design: record the brain signal to rebuild the scene you encounter or give your a fictitious scene to speculate the brain activity
 
 Some appliable references:
+
 [1] Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J, Yacoub E, Ugurbil K, Andersson J, Beckmann CF, Jenkinson M, Smith SM, Van Essen DC. A multi-modal parcellation of human cerebral cortex. Nature. 2016 Aug 11;536(7615):171-178. doi: 10.1038/nature18933. Epub 2016 Jul 20. PMID: 27437579; PMCID: PMC4990127.
 <p align="center">
 <img src="./figure/The_HCP_multi-modal_parcellation_HCP_MMP1.0.png" alt="The_HCP_multi-modal_parcellation_HCP_MMP1.0" width="50%"/>
@@ -17,12 +18,12 @@ Some appliable references:
 </p>
 
 [3] Tang J, LeBel A, Jain S, Huth AG. Semantic reconstruction of continuous language from non-invasive brain recordings. Nat Neurosci. 2023 May;26(5):858-866. doi: 10.1038/s41593-023-01304-9. Epub 2023 May 1. PMID: 37127759; PMCID: PMC11304553.
-### Framework:
+***Framework:***
 <p align="center">
 <img src="./figure/Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_framework.png" alt="Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_framework" width="50%"/>
 </p>
 
-### Result:
+***Result:***
 <p align="center">
 <img src="./figure/Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result.png" alt="Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result" width="50%"/>
 </p>
