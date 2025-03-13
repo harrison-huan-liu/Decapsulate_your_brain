@@ -46,9 +46,9 @@ Using this expression of the posterior probability $P(x|K)$, we can predict the 
 
 Another classic decoder builds on the Kalman filter and allows levering the dynamics of the system
 
-<p align="center">
+<div align="center">
 <img src="decoding_method.png" alt="decoding_method" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 ## Assess the quality of a decoder
 For a continuous variable, like wind direction, we can just check how well it reconstructs the original stimulus $x$:
@@ -58,3 +58,5 @@ E_{K~P(K|x)} || \hat{x}(K)-x ||^2
 $$
 
 where we average over samples $K$. This is the variance of the decoder. We think that one particular decoder is better than another decoder if it has a lower variance or, in other words, if it is more accurate at estimating $x$ from the neural response of the population.
+
+[Paper_Note](../Paper_Note.md)

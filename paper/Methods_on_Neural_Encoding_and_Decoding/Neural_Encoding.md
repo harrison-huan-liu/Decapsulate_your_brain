@@ -32,9 +32,9 @@ The less for the vaildability of the neuron is, the information obtained per tri
 
 - ***Expirement on a mock neuron***
 
-<p align="center">
+<div align="center">
 <img src="mock_neuron.png" alt="mock_neuron" width="60%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *(a) Complete response distributions for each stimulus intensity; darker values indicate higher probabilities.
 (b) Summing these values along the horizontal lines leads to the overall response probability distribution (right), assuming that each stimulus is equally likely to occur. 
@@ -71,9 +71,9 @@ $$
 
 - ***Flow chart of how to measure the channel capacity of a neuron***
 
-<p align="center">
+<div align="center">
 <img src="neuron_capacity.png" alt="neuron_capacity" width="60%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *The same stimulus is presented $n$ times while the responses $R_i$ are measured (left). These responses are averaged to obtain the average response $R_avg$. The difference between each $R_i$ and $R_{avg}$ become the noise traces $N_i$ (middle). These are Fourier-transformed to the noise power spectra $N_i(f)$ (right), which can be averaged as well. Bottom left, power spectra of the mean response (red) together with the mean power spectra of the noise (yellow). Bottom right, ratio of these two functions, the so-called signal-to-noise ratio or SNR, together with the cumulative information rate. Response and noise data were created in a pseudo-random way from Gaussian distributions*
 
@@ -89,9 +89,9 @@ In practice, it is easier to represent neural responses with minimal assumptions
 - ***Summary diagram for calculation of upper and lower bounds on
 information transfer***
 
-<p align="center">
+<div align="center">
 <img src="information_transfer_bound.png" alt="information_transfer_bound" width="40%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *Top, situation where a stimulus $S$ is corrupted by additive noise and subsequently fed through an unknown encoder to result in the response $R$. The lower bound is obtained with a linear reverse filter operation. The upper bound is obtained directly by comparing average and individual responses.*
 
@@ -102,9 +102,9 @@ information transfer***
 - ***With the added assumption that the neuronal response amplitudes, expressed in the frequency domain, have Gaussian probability distributions.***
 - ***Calculate information transfer for each possible stimulus condition to obtain the complete curve:*** assumes a representation (choice of parameters) describing the stimulus conditions and a model relating these stimulus conditions to neural responses.
 
-<p align="center">
+<div align="center">
 <img src="reverse_reconstruction.png" alt="reverse_reconstruction" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 **Linear reconstruction formulas**
 
@@ -125,7 +125,9 @@ information transfer***
 
 ## Expirements
 
-<p align="center">
+<div align="center">
 <img src="methods_neural_estimation.png" alt="methods_neural_estimation" width="90%" style="display: block; margin: 0 auto"/>
 <img src="results_neural_estimation.png" alt="results_neural_estimation" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
+
+[Paper_Note](../Paper_Note.md)

@@ -11,9 +11,9 @@ BrainBERT, learns a complex non-linear transformation of neural data using a Tra
 
 ### BrainBERT Framework
 
-<p align="center">
+<div align="center">
 <img src="BrainBERT_Framework.png" alt="BrainBERT_Framework" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *(a) Locations of intracranial electrodes (yellow dots) projected onto the surface of the
 brain across all subjects for each hemisphere. (b) Subjects watched movies while neural data was
@@ -35,9 +35,9 @@ must learn to infer the masked neural activity from the surrounding context.*
 
 The core of BrainBERT is **a stack of Transformer encoder layers**. In pretraining, BrainBERT receives an unannotated time-frequency representation of the neural signal as input. This input is randomly masked, and the model learns to reconstruct the missing portions. The pretrained BrainBERT weights can then be combined with a classification head and trained on decoding tasks using supervised data.
 
-<p align="center">
+<div align="center">
 <img src="BrainBERT_Spectrograms.png" alt="BrainBERT_Spectrograms" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *BrainBERT can be trained to either use spectrograms computed by a traditional method, such as the short-time Fourier Transform (top left), or modern methods designed for neural data, such as the superlet transform (bottom left). Shown above are spectrograms from a single electrode over a 5s interval. Superlets provide superresolution by compositing together Morlet wavelet transforms across a range of orders. And we mask multiple continuous bands of random frequencies and time intervals (top right, red horizontal and vertical rectangles). Since the temporal resolution of superlets falls off as the inverse function of frequency (bottom right), we adopt a masking strategy that reflects this.*
 
@@ -54,9 +54,9 @@ $$
 
 , which are produced using a weight matrix $W_{in} \in R^{d_h*n}$ and combined with a static positional embedding $P$. Each layer applies self-attention and a feed forward layer to the input, with layer normalization and dropout being applied after each. The outputs $E^j_{out} of the $j$-th layer, become the inputs to the $(j+1)$-th layer. The outputs of BrainBERT are $E^N_{out}$, the outputs at the N-th layer.
 
-<p align="center">
+<div align="center">
 <img src="transformer_encoder.png" alt="transformer_encoder" width="50%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 During pretraining, the hidden-layer outputs from the top of the stack are passed as input to a spectrogram prediction head, which is a stacked linear network with a single hidden layer, GeLU activation, and layer normalization.
 
@@ -104,9 +104,9 @@ After pretraining, BrainBERT can be used as a feature extractor for a linear cla
 
 ***Decoding accuracy without fine-tuning***
 
-<p align="center">
+<div align="center">
 <img src="BrainBERT_Encode_Decode.png" alt="BrainBERT_Encode_Decode" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *Using a linear decoder for classifying sentence onsets either (left) directly with the neural recordings or (right) with BrainBERT (superlet input) embeddings. Each circle denotes a different electrode. The color shows the classification performance (see color map on right). Electrodes are shown on the left or right hemispheres. Chance has AUC of 0.5. Only the 947 held-out electrodes are shown. Using BrainBERT highlights far more relevant electrodes, provides much better decoding accuracy, and more convincingly identifies language-related regions in the superior temporal and frontal regions*
 
@@ -127,9 +127,9 @@ from the perceptual level while ensuring consistency between its consecutive fra
 
 Furthermore, NeuroClips also pioneers the exploration of Multi-fMRI Fusion for longer video reconstruction
 
-<p align="center">
+<div align="center">
 <img src="NeuroClips_Framework.png" alt="NeuroClips_Framework" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 ### Method
 
@@ -202,25 +202,25 @@ $$
 
 ### Multi-fMRI Fusion
 
-<p align="center">
+<div align="center">
 <img src="Multi-fMRI_Fusion.png" alt="Multi-fMRI_Fusion" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *Visualization of Multi-fMRI fusion. With the semantic relevance measure, we can generate video clips up to 6s long without any additional training*
 
 ### Video Reconstruction
 
-<p align="center">
+<div align="center">
 <img src="Video_Reconstruction.png" alt="Video_Reconstruction" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *Video reconstruction on the cc2017 dataset. On the left are the results of the comparison with previous studies, and on the right are additional comparisons with previous SOTA methods. Best viewed with zoom-in. As shown in the leftmost figure group, Mind-Video’s reconstruction fails to go for detail consistency on the character’s face, but our NeuroClips achieves an extremely high consistency*
 
 ### Interpretation Results
 
-<p align="center">
+<div align="center">
 <img src="interpretation_result.png" alt="interpretation_result" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 *Visualization of voxel weights for the first ridge regression layer for subject 1, with each voxel’s weight averaged and normalized to between 0 and 1 and we set the colorbar to 0.25-0.75 for a clear comparison*
 
@@ -228,12 +228,14 @@ $$
 
 ### GLMNet Encoder Framework
 
-<p align="center">
+<div align="center">
 <img src="GLMNet_Encoder.png" alt="GLMNet_Encoder" width="90%" style="display: block; margin: 0 auto"/>
-</p>
+</div>
 
 ### Reconstruction Presentation
 
 <p align="center">
 <img src="Reconstruction_Presentations.png" alt="Reconstruction_Presentations" width="90%" style="display: block; margin: 0 auto"/>
 </p>
+
+[Paper_Note](../Paper_Note.md)
