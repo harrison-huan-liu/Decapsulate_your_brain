@@ -1,3 +1,17 @@
+<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+<script>
+MathJax = {
+    tex: {
+        inlineMath: [['$', '$']], 
+        displayMath: [['$$', '$$']],
+        processEscapes: true 
+    }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 ## Neural Decoding
 
 Once information is encoded, downstream areas must integrate information from upstream ensembles of neurons. For example, when reading the sheet music, the retina processes photons, and retinal ganglion cells transmit activity via the lateral geniculate nucleus to primary visual cortex. Even at the level of the retina, encoding and decoding approaches have been powerful to better estimate the variance in neural responses.
@@ -47,7 +61,7 @@ Using this expression of the posterior probability $P(x|K)$, we can predict the 
 Another classic decoder builds on the Kalman filter and allows levering the dynamics of the system
 
 <div align="center">
-<img src="decoding_method.png" alt="decoding_method" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/decoding_method.png" alt="decoding_method" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 ## Assess the quality of a decoder

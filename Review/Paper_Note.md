@@ -3,13 +3,13 @@
 - Schirrmeister, R.T., Springenberg, J.T., Fiederer, L.D.J., Glasstetter, M., Eggensperger, K., Tangermann, M., Hutter, F. & Ball, T.(2017). Deep learning with convolutional neural networks for EEG decoding and visualization. Human Brain Mapping, Aug. 2017. (https://braindecode.org/stable/index.html) (https://github.com/braindecode/braindecode)
 
 <p align="center">
-<img src="../figure/Deep_learning_with_convolutional_neural_networks_for_EEG_decoding_and_visualization.jpg" alt="Deep_learning_with_convolutional_neural_networks_for_EEG_decoding_and_visualization" width="70%"/>
+<img src="./Review_Paper_and_Figure/Figure/Deep_learning_with_convolutional_neural_networks_for_EEG_decoding_and_visualization.jpg" alt="Deep_learning_with_convolutional_neural_networks_for_EEG_decoding_and_visualization" width="70%"/>
 </p>
 
 - https://doi.org/10.48550/arXiv.2312.01280, CVPR, 2024.
 
 <p align="center">
-<img src="../figure/Brain_decodes_deep_nets_framework.png" alt="Brain_decodes_deep_nets_framework" width="80%"/>
+<img src="./Review_Paper_and_Figure/Figure/Brain_decodes_deep_nets_framework.png" alt="Brain_decodes_deep_nets_framework" width="80%"/>
 </p>
 
 ### RNAseq/proteomics, AlphaFold/gene-regulatory networks
@@ -36,7 +36,7 @@
 
 ## Visual Feature Decoding
 
-[Visual_Feature_Decoding](./Visual_Feature_Decoding/Visual_Feature_Decoding.md)
+[Visual_Feature_Decoding](./Visual_Feature_Decoding/Visual_Feature_Decoding_Foundation_Models.md)
 
 - EEG2Video: Towards Decoding Dynamic Visual Perception from EEG Signals, NeurlPS, 2024.
 - NeuroClips: Towards High-fidelity and Smooth fMRI-to-Video Reconstruction, NeurlPS, 2024.
@@ -56,10 +56,10 @@
 
 [1] Glasser MF, Coalson TS, Robinson EC, Hacker CD, Harwell J, Yacoub E, Ugurbil K, Andersson J, Beckmann CF, Jenkinson M, Smith SM, Van Essen DC. A multi-modal parcellation of human cerebral cortex. Nature. 2016 Aug 11;536(7615):171-178. doi: 10.1038/nature18933. Epub 2016 Jul 20. PMID: 27437579; PMCID: PMC4990127.
 <p align="center">
-<img src="../figure/The_HCP_multi-modal_parcellation_HCP_MMP1.0.png" alt="The_HCP_multi-modal_parcellation_HCP_MMP1.0" width="50%"/>
+<img src="./Review_Paper_and_Figure/Figure/The_HCP_multi-modal_parcellation_HCP_MMP1.0.png" alt="The_HCP_multi-modal_parcellation_HCP_MMP1.0" width="50%"/>
 </p>
 
 [2] Mackenzie Weygandt Mathis, Adriana Perez Rotondo, Edward F. Chang, Andreas S. Tolias, Alexander Mathis, Decoding the brain: From neural representations to mechanistic models, Cell, Volume 187, Issue 21, 2024, Pages 5814-5832, ISSN 0092-8674, https://doi.org/10.1016/j.cell.2024.08.051.
 <p align="center">
-<img src="../figure/cell_review.jpg" alt="cell_review" width="50%"/>
+<img src="./Review_Paper_and_Figure/Figure/cell_review.jpg" alt="cell_review" width="50%"/>
 </p>
