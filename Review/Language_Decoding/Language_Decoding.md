@@ -2,7 +2,7 @@
 A **brain-computer interface** that decodes continuous language from non-invasive recordings, like functional magnetic resonance imaging (fMRI) and electroencephalography (EEG), would have many scientific and practical applications. Currently, however, non-invasive language decoders can only identify stimuli from among a small set of words or phrases. 
 
 <p align="center">
-<img src="Translating_the_brain.png" alt="Translating_the_brain" width="80%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/Translating_the_brain.png" alt="Translating_the_brain" width="80%" style="display: block; margin: 0 auto"/>
 </p>
 
 ---
@@ -19,7 +19,7 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
 #### **二、ICI三阶段发展架构**
 
 <p align="center">
-<img src="ICI.png" alt="ICI" width="80%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/ICI.png" alt="ICI" width="80%" style="display: block; margin: 0 auto"/>
 </p>
 
 1. **信号解释阶段（基础阶段）**
@@ -29,14 +29,14 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
 	  - **单通道处理：** 聚焦局部脑区（如Broca区）的EEG/ECoG信号，依赖独立成分分析（ICA）和小波变换去噪。
 
       <p align="center">
-      <img src="broca_area.png" alt="broca_area" width="50%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/broca_area.png" alt="broca_area" width="50%" style="display: block; margin: 0 auto"/>
       </p>
 
 	  - **线性特征提取：** 主成分分析（PCA）、共空间模式（CSP）用于降维，提升信噪比.
       - **静态分类模型：** 支持向量机（SVM）、k-近邻（k-NN）主导，准确率约80%（如NIRS系统对ALS患者的二元指令识别）。
 
       <p align="center">
-      <img src="NIRS.png" alt="NIRS" width="30%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/NIRS.png" alt="NIRS" width="30%" style="display: block; margin: 0 auto"/>
       </p>
 
    - ***应用场景***
@@ -46,7 +46,7 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
      - 早期临床测试（如P300拼写器的字符选择任务）。
 
       <p align="center">
-      <img src="p300_speller.png" alt="p300_speller" width="80%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/p300_speller.png" alt="p300_speller" width="80%" style="display: block; margin: 0 auto"/>
       </p>
 
    - ***局限性***
@@ -62,11 +62,11 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
      - **多模态融合：** 整合EEG（时间分辨率高）与fNIRS（空间分辨率高），提升语义解码鲁棒性。
 
       <p align="center">
-      <img src="NIRS.png" alt="NIRS" width="30%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/NIRS.png" alt="NIRS" width="30%" style="display: block; margin: 0 auto"/>
       </p>
 
       <p align="center">
-      <img src="EEG_NIRS_framework.png" alt="EEG_NIRS_framework" width="80%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/EEG_NIRS_framework.png" alt="EEG_NIRS_framework" width="80%" style="display: block; margin: 0 auto"/>
       </p>
 
      - **实时处理：** 自适应分类算法（动态SVM、在线学习）将延迟降至毫秒级（如2.64-10.23 ms）。
@@ -74,35 +74,35 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
 		     - Local Decoding:
 
             <p align="center">
-            <img src="Local_decoding.png" alt="Local_decoding" width="70%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/Local_decoding.png" alt="Local_decoding" width="70%" style="display: block; margin: 0 auto"/>
             </p>
 
 		     - SNN Framwork:
 
             <p align="center">
-            <img src="SNN.png" alt="SNN" width="80%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/SNN.png" alt="SNN" width="80%" style="display: block; margin: 0 auto"/>
             </p>
 
 		     - LIF Neuron:
 
             <p align="center">
-            <img src="LIF.png" alt="LIF" width="100%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/LIF.png" alt="LIF" width="100%" style="display: block; margin: 0 auto"/>
             </p>
 
 		     - Experiment Setting:
 
             <p align="center">
-            <img src="Experiment_SNN.png" alt="Experiment_SNN" width="80%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/Experiment_SNN.png" alt="Experiment_SNN" width="80%" style="display: block; margin: 0 auto"/>
             </p>
 
 		     - Results:
 
             <p align="center">
-            <img src="Results_SNN_Memory.png" alt="Results_SNN_Memory" width="70%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/Results_SNN_Memory.png" alt="Results_SNN_Memory" width="70%" style="display: block; margin: 0 auto"/>
             </p>
 
             <p align="center">
-            <img src="Results_SNN_Tradeoff.png" alt="Results_SNN_Tradeoff" width="60%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/Results_SNN_Tradeoff.png" alt="Results_SNN_Tradeoff" width="60%" style="display: block; margin: 0 auto"/>
             </p>
 
      - **深度学习初步应用：** CNN提取时空特征，GRU/LSTM建模序列依赖。
@@ -110,20 +110,20 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
 			 - data preprocess pipeline:
 
         <p align="center">
-        <img src="datapreprocess_pipeline.png" alt="datapreprocess_pipeline" width="90%" style="display: block; margin: 0 auto"/>
+        <img src="./Figure/datapreprocess_pipeline.png" alt="datapreprocess_pipeline" width="90%" style="display: block; margin: 0 auto"/>
         </p>
 
 	     - EEGNet: A Compact Convolutional Neural Network for EEG-based Brain-Computer Interfaces
 		     - Framework:
 
             <p align="center">
-            <img src="EEGNet.png" alt="EEGNet" width="90%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/EEGNet.png" alt="EEGNet" width="90%" style="display: block; margin: 0 auto"/>
             </p>
 
 		     - Results: 
 
             <p align="center">
-            <img src="Results_EEGNet.png" alt="Results_EEGNet" width="80%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/Results_EEGNet.png" alt="Results_EEGNet" width="80%" style="display: block; margin: 0 auto"/>
             </p>
 
    - ***应用场景***
@@ -131,26 +131,26 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
      - **连续语音解码：** ECoG信号解码实现每分钟10-15词的输出（如Herff等人“脑到文本”系统，错误率25%）。
 
       <p align="center">
-      <img src="brain_to_text.png" alt="brain_to_text" width="60%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/brain_to_text.png" alt="brain_to_text" width="60%" style="display: block; margin: 0 auto"/>
       </p>
 
      - **情感交互：** 结合前额叶EEG与心率信号，识别用户情绪（如Li等研究，F1-score达0.85）。
 	     - PSD Distribution:
 
         <p align="center">
-        <img src="emotional_comparsion.png" alt="emotional_comparsion" width="60%" style="display: block; margin: 0 auto"/>
+        <img src="./Figure/emotional_comparsion.png" alt="emotional_comparsion" width="60%" style="display: block; margin: 0 auto"/>
         </p>
 
 	     - Wave Frequency:
 
         <p align="center">
-        <img src="frequency_wave.png" alt="frequency_wave" width="50%" style="display: block; margin: 0 auto"/>
+        <img src="./Figure/frequency_wave.png" alt="frequency_wave" width="50%" style="display: block; margin: 0 auto"/>
         </p>
 
 	     - Emotional Wave:
 
         <p align="center">
-        <img src="emotional_wave.png" alt="emotional_wave" width="50%" style="display: block; margin: 0 auto"/>
+        <img src="./Figure/emotional_wave.png" alt="emotional_wave" width="50%" style="display: block; margin: 0 auto"/>
         </p>
 
      - **临床突破：** ALS患者通过侵入式BCI实现基本沟通（McCane等研究，72%患者准确率超70%）。
@@ -161,7 +161,7 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
 	     - Speech synthesis from neural decoding of spoken sentences:
 
         <p align="center">
-        <img src="ALS_speech.png" alt="ALS_speech" width="80%" style="display: block; margin: 0 auto"/>
+        <img src="./Figure/ALS_speech.png" alt="ALS_speech" width="80%" style="display: block; margin: 0 auto"/>
         </p>
 
 3. **智能互动阶段（创新阶段）**
@@ -173,7 +173,7 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
 		     - Model:
 
           <p align="center">
-          <img src="clip.png" alt="clip" width="70%" style="display: block; margin: 0 auto"/>
+          <img src="./Figure/clip.png" alt="clip" width="70%" style="display: block; margin: 0 auto"/>
           </p>
 
      - **迁移学习**：跨用户模型迁移（如Wu等研究，训练时间从数周缩短至20分钟）。
@@ -183,7 +183,7 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
      - **个性化语音合成：** Angrick团队通过植入式ECoG系统为ALS患者生成80%可懂语音，长期稳定性达6周。
 
       <p align="center">
-      <img src="Acoustic_speech_reconstruct.png" alt="Acoustic_speech_reconstruct" title="Overview of the closed-loop speech synthesizer. (**A**) Neural activity is acquired from a subset of 64 electrodes (highlighted in orange) from two 8 × 8 ECoG electrode arrays covering sensorimotor areas for face and tongue, and for upper limb regions. (**B**) The closed-loop speech synthesizer extracts high-gamma features to reveal speech-related neural correlates of attempted speech production and propagates each frame to a neural voice activity detection (nVAD) model (**C**) that identifies and extracts speech segments (**D**). When the participant finishes speaking a word, the nVAD model forwards the high-gamma activity of the whole extracted sequence to a bidirectional decoding model (**E**) which estimates acoustic features (**F**) that can be transformed into an acoustic speech signal. (**G**) The synthesized speech is played back as acoustic feedback." width="70%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/Acoustic_speech_reconstruct.png" alt="Acoustic_speech_reconstruct" title="Overview of the closed-loop speech synthesizer. (**A**) Neural activity is acquired from a subset of 64 electrodes (highlighted in orange) from two 8 × 8 ECoG electrode arrays covering sensorimotor areas for face and tongue, and for upper limb regions. (**B**) The closed-loop speech synthesizer extracts high-gamma features to reveal speech-related neural correlates of attempted speech production and propagates each frame to a neural voice activity detection (nVAD) model (**C**) that identifies and extracts speech segments (**D**). When the participant finishes speaking a word, the nVAD model forwards the high-gamma activity of the whole extracted sequence to a bidirectional decoding model (**E**) which estimates acoustic features (**F**) that can be transformed into an acoustic speech signal. (**G**) The synthesized speech is played back as acoustic feedback." width="70%" style="display: block; margin: 0 auto"/>
       </p>
 
      - **多语言处理：** Chen等框架支持中英文混合解码，准确率差异小于5%。
@@ -191,20 +191,20 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
 		     - Decoder:
 
             <p align="center">
-            <img src="speech_ecog_decoder.png" alt="speech_ecog_decoder" title="**a**, The speech encoder architecture. We input a spectrogram into a network of temporal convolution layers and channel MLPs that produce speech parameters. **b**,**c**, The ECoG decoder (**c**) using the 3D ResNet architecture. We first use several temporal and spatial convolutional layers with residual connections and spatiotemporal pooling to generate downsampled latent features, and then use corresponding transposed temporal convolutional layers to upsample the features to the original temporal dimension. We then apply temporal convolution layers and channel MLPs to map the features to speech parameters, as shown in **b**. The non-causal version uses non-causal temporal convolution in each layer, whereas the causal version uses causal convolution. **d**, The ECoG decoder using the 3D Swin architecture. We use three or four stages of 3D Swin blocks with spatial-temporal attention (three blocks for LD and four blocks for HB) to extract the features from the ECoG signal. We then use the transposed versions of temporal convolution layers as in **c** to upsample the features. The resulting features are mapped to the speech parameters using the same structure as shown in **b**. Non-causal versions apply temporal attention to past, present and future tokens, whereas the causal version applies temporal attention only to past and present tokens. **e**, The ECoG decoder using LSTM layers. We use three LSTM layers and one layer of channel MLP to generate features. We then reuse the prediction layers in **b** to generate the corresponding speech parameters. The non-causal version employs bidirectional LSTM in each layer, whereas the causal version uses unidirectional LSTM." width="100%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/speech_ecog_decoder.png" alt="speech_ecog_decoder" title="**a**, The speech encoder architecture. We input a spectrogram into a network of temporal convolution layers and channel MLPs that produce speech parameters. **b**,**c**, The ECoG decoder (**c**) using the 3D ResNet architecture. We first use several temporal and spatial convolutional layers with residual connections and spatiotemporal pooling to generate downsampled latent features, and then use corresponding transposed temporal convolutional layers to upsample the features to the original temporal dimension. We then apply temporal convolution layers and channel MLPs to map the features to speech parameters, as shown in **b**. The non-causal version uses non-causal temporal convolution in each layer, whereas the causal version uses causal convolution. **d**, The ECoG decoder using the 3D Swin architecture. We use three or four stages of 3D Swin blocks with spatial-temporal attention (three blocks for LD and four blocks for HB) to extract the features from the ECoG signal. We then use the transposed versions of temporal convolution layers as in **c** to upsample the features. The resulting features are mapped to the speech parameters using the same structure as shown in **b**. Non-causal versions apply temporal attention to past, present and future tokens, whereas the causal version applies temporal attention only to past and present tokens. **e**, The ECoG decoder using LSTM layers. We use three LSTM layers and one layer of channel MLP to generate features. We then reuse the prediction layers in **b** to generate the corresponding speech parameters. The non-causal version employs bidirectional LSTM in each layer, whereas the causal version uses unidirectional LSTM." width="100%" style="display: block; margin: 0 auto"/>
             </p>
 
 		     - Framework:
 
             <p align="center">
-            <img src="speech_decoding_framework.png" alt="speech_decoding_framework" title="The upper part shows the ECoG-to-speech decoding pipeline. The ECoG decoder generates time-varying speech parameters from ECoG signals. The speech synthesizer generates spectrograms from the speech parameters. A separate spectrogram inversion algorithm converts the spectrograms to speech waveforms. The lower part shows the speech-to-speech auto-encoder, which generates the guidance for the speech parameters to be produced by the ECoG decoder during its training. The speech encoder maps an input spectrogram to the speech parameters, which are then fed to the same speech synthesizer to reproduce the spectrogram. The speech encoder and a few learnable subject-specific parameters in the speech synthesizer are pre-trained using speech signals only. Only the upper part is needed to decode the speech from ECoG signals once the pipeline is trained." width="100%" style="display: block; margin: 0 auto"/>
+            <img src="./Figure/speech_decoding_framework.png" alt="speech_decoding_framework" title="The upper part shows the ECoG-to-speech decoding pipeline. The ECoG decoder generates time-varying speech parameters from ECoG signals. The speech synthesizer generates spectrograms from the speech parameters. A separate spectrogram inversion algorithm converts the spectrograms to speech waveforms. The lower part shows the speech-to-speech auto-encoder, which generates the guidance for the speech parameters to be produced by the ECoG decoder during its training. The speech encoder maps an input spectrogram to the speech parameters, which are then fed to the same speech synthesizer to reproduce the spectrogram. The speech encoder and a few learnable subject-specific parameters in the speech synthesizer are pre-trained using speech signals only. Only the upper part is needed to decode the speech from ECoG signals once the pipeline is trained." width="100%" style="display: block; margin: 0 auto"/>
             </p>
 
      - **脑控虚拟化身**：Metzger等系统结合语音解码与面部动作捕捉，实现实时表情同步（延迟<200 ms）。
 	     - A high-performance neuroprosthesis for speech decoding and avatar control: 
 
         <p align="center">
-        <img src="multimodal_speech_decoding.png" alt="multimodal_speech_decoding" title="**a**, Overview of the speech-decoding pipeline. A brainstem-stroke survivor with anarthria was implanted with a 253-channel high-density ECoG array 18 years after injury. Neural activity was processed and used to train deep-learning models to predict phone probabilities, speech-sound features and articulatory gestures. These outputs were used to decode text, synthesize audible speech and animate a virtual avatar, respectively. **b**, A sagittal magnetic resonance imaging scan showing brainstem atrophy (in the bilateral pons; red arrow) resulting from stroke. **c**, Magnetic resonance imaging reconstruction of the participant’s brain overlaid with the locations of implanted electrodes. The ECoG array was implanted over the participant’s lateral cortex, centred on the central sulcus. **d**, Top: simple articulatory movements attempted by the participant. Middle: Electrode-activation maps demonstrating robust electrode tunings across articulators during attempted movements. Only the electrodes with the strongest responses (top 20%) are shown for each movement type. Colour indicates the magnitude of the average evoked HGA response with each type of movement. Bottom: _z_-scored trial-averaged evoked HGA responses with each movement type for each of the outlined electrodes in the electrode-activation maps. In each plot, each response trace shows mean ± standard error across trials and is aligned to the peak-activation time (_n_ = 130 trials for jaw open, _n_ = 260 trials each for lips forwards or back and tongue up or down)." width="80%" style="display: block; margin: 0 auto"/>
+        <img src="./Figure/multimodal_speech_decoding.png" alt="multimodal_speech_decoding" title="**a**, Overview of the speech-decoding pipeline. A brainstem-stroke survivor with anarthria was implanted with a 253-channel high-density ECoG array 18 years after injury. Neural activity was processed and used to train deep-learning models to predict phone probabilities, speech-sound features and articulatory gestures. These outputs were used to decode text, synthesize audible speech and animate a virtual avatar, respectively. **b**, A sagittal magnetic resonance imaging scan showing brainstem atrophy (in the bilateral pons; red arrow) resulting from stroke. **c**, Magnetic resonance imaging reconstruction of the participant’s brain overlaid with the locations of implanted electrodes. The ECoG array was implanted over the participant’s lateral cortex, centred on the central sulcus. **d**, Top: simple articulatory movements attempted by the participant. Middle: Electrode-activation maps demonstrating robust electrode tunings across articulators during attempted movements. Only the electrodes with the strongest responses (top 20%) are shown for each movement type. Colour indicates the magnitude of the average evoked HGA response with each type of movement. Bottom: _z_-scored trial-averaged evoked HGA responses with each movement type for each of the outlined electrodes in the electrode-activation maps. In each plot, each response trace shows mean ± standard error across trials and is aligned to the peak-activation time (_n_ = 130 trials for jaw open, _n_ = 260 trials each for lips forwards or back and tongue up or down)." width="80%" style="display: block; margin: 0 auto"/>
         </p>
 
 #### **三、神经认知与计算基础**
@@ -214,14 +214,14 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
    - ***双通路模型***
 
       <p align="center">
-      <img src="dual_route_cascaded.png" alt="dual_route_cascaded" width="40%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/dual_route_cascaded.png" alt="dual_route_cascaded" width="40%" style="display: block; margin: 0 auto"/>
       </p>
 
      - **词汇通路（背侧流）：** Broca区→顶叶，负责语音生成与句法处理（如θ波编码音节）。
      - **语音通路（腹侧流）：** Wernicke区→颞叶，支持语义理解（如γ波关联词汇整合）。
 
       <p align="center">
-      <img src="speech_dorsal_ventral_pathway.png" alt="speech_dorsal_ventral_pathway" width="60%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/speech_dorsal_ventral_pathway.png" alt="speech_dorsal_ventral_pathway" width="60%" style="display: block; margin: 0 auto"/>
       </p>
 
    - ***工作记忆模型***
@@ -230,7 +230,7 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
      - **情景缓冲器：** 整合长时记忆与实时语言信息，支持复杂句子理解。  
 
       <p align="center">
-      <img src="working_memory_model.png" alt="working_memory_model" width="40%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/working_memory_model.png" alt="working_memory_model" width="40%" style="display: block; margin: 0 auto"/>
       </p>
 
    - ***注意机制***
@@ -239,7 +239,7 @@ A **brain-computer interface** that decodes continuous language from non-invasiv
      - **刺激驱动网络（腹侧）：** 颞顶联合区响应突发语义冲突（如歧义词处理）。  
 
       <p align="center">
-      <img src="attention_mechanism.png" alt="attention_mechanism" title="Control of goal-directed and stimulus-driven attention in the brain" width="80%" style="display: block; margin: 0 auto"/>
+      <img src="./Figure/attention_mechanism.png" alt="attention_mechanism" title="Control of goal-directed and stimulus-driven attention in the brain" width="80%" style="display: block; margin: 0 auto"/>
       </p>
 
 2. **神经基础**
@@ -338,12 +338,12 @@ BCI语言解码已实现从“信号到符号”的跨越，但距离自然交�
 
 ***Framework:***
 <p align="center">
-<img src="Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_framework.png" alt="Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_framework" width="80%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_framework.png" alt="Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_framework" width="80%" style="display: block; margin: 0 auto"/>
 </p>
 
 ***Result:***
 <p align="center">
-<img src="Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result.png" alt="Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result" width="80%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result.png" alt="Semantic_reconstruction_of_continuous_language_from_non-invasive_brain_recordings_result" width="80%" style="display: block; margin: 0 auto"/>
 </p>
 
 ---

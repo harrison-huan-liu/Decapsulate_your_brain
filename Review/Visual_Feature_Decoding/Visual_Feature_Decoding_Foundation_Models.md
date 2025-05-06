@@ -1,3 +1,15 @@
+<script>
+MathJax = {
+    tex: {
+        inlineMath: [['$', '$']], 
+        displayMath: [['$$', '$$']],
+        processEscapes: true 
+    }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 <center>
 
 ## ICLR2023 BrainBERT: Self-supervised representation learning for intracranial recordings
@@ -12,7 +24,7 @@ BrainBERT, learns a complex non-linear transformation of neural data using a Tra
 ### BrainBERT Framework
 
 <div align="center">
-<img src="BrainBERT_Framework.png" alt="BrainBERT_Framework" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/BrainBERT_Framework.png" alt="BrainBERT_Framework" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 *(a) Locations of intracranial electrodes (yellow dots) projected onto the surface of the
@@ -36,7 +48,7 @@ must learn to infer the masked neural activity from the surrounding context.*
 The core of BrainBERT is **a stack of Transformer encoder layers**. In pretraining, BrainBERT receives an unannotated time-frequency representation of the neural signal as input. This input is randomly masked, and the model learns to reconstruct the missing portions. The pretrained BrainBERT weights can then be combined with a classification head and trained on decoding tasks using supervised data.
 
 <div align="center">
-<img src="BrainBERT_Spectrograms.png" alt="BrainBERT_Spectrograms" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/BrainBERT_Spectrograms.png" alt="BrainBERT_Spectrograms" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 *BrainBERT can be trained to either use spectrograms computed by a traditional method, such as the short-time Fourier Transform (top left), or modern methods designed for neural data, such as the superlet transform (bottom left). Shown above are spectrograms from a single electrode over a 5s interval. Superlets provide superresolution by compositing together Morlet wavelet transforms across a range of orders. And we mask multiple continuous bands of random frequencies and time intervals (top right, red horizontal and vertical rectangles). Since the temporal resolution of superlets falls off as the inverse function of frequency (bottom right), we adopt a masking strategy that reflects this.*
@@ -52,10 +64,10 @@ $$
 E_{in}^0 = (W_{in}Y+P)
 $$
 
-, which are produced using a weight matrix $W_{in} \in R^{d_h*n}$ and combined with a static positional embedding $P$. Each layer applies self-attention and a feed forward layer to the input, with layer normalization and dropout being applied after each. The outputs $E^j_{out} of the $j$-th layer, become the inputs to the $(j+1)$-th layer. The outputs of BrainBERT are $E^N_{out}$, the outputs at the N-th layer.
+, which are produced using a weight matrix $W_{in} \in R^{d_h*n}$ and combined with a static positional embedding $P$. Each layer applies self-attention and a feed forward layer to the input, with layer normalization and dropout being applied after each. The outputs $E^j_{out}$ of the $j$-th layer, become the inputs to the $(j+1)$-th layer. The outputs of BrainBERT are $E^N_{out}$, the outputs at the N-th layer.
 
 <div align="center">
-<img src="transformer_encoder.png" alt="transformer_encoder" width="50%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/transformer_encoder.png" alt="transformer_encoder" width="50%" style="display: block; margin: 0 auto"/>
 </div>
 
 During pretraining, the hidden-layer outputs from the top of the stack are passed as input to a spectrogram prediction head, which is a stacked linear network with a single hidden layer, GeLU activation, and layer normalization.
@@ -70,7 +82,7 @@ For both types of representations, the spectrograms are z-scored per frequency b
 ***Pretraining.***
 During pretraining, a masking strategy is applied to the time-frequency representation $Y \in R^{n*m}$, and an augmented view of the spectrogram, $\hat{Y}$, is produced. Given $\hat{Y}$, BrainBERT creates representations for a spectrogram prediction network, which produces a reconstruction $\hat{Y}$ of the original signal;
 
-For the STFT, we adapt the masking strategy which the spectrogram is corrupted at randomly chosen time and frequency intervals. The width of each time-mask is a randomly chosen integer from the range $[step^{time}_{min}, step^{time}_{max}]$. Intervals selected for masking are probabilistically either left untouched (probability $p_{ID}$), replaced with a random slice of the same spectrogram (probability $p_{replace}$), or filled in with zeros otherwise. The procedure for masking frequency intervals is similar, but the width is chosen from the range $[step^{freq}_{min}, step^{freq}_{max}]$
+For the STFT, we adapt the masking strategy which the spectrogram is corrupted at randomly chosen time and frequency intervals. The width of each time-mask is a randomly chosen integer from the range $\left[step_{min}^{time}, step_{max}^{time}\right]$. Intervals selected for masking are probabilistically either left untouched (probability $p_{ID}$), replaced with a random slice of the same spectrogram (probability $p_{replace}$), or filled in with zeros otherwise. The procedure for masking frequency intervals is similar, but the width is chosen from the range $\left[step_{min}^{freq}, step_{max}^{freq}\right]$ 
 
 For the superlet model, we use an adaptive masking scheme that reflects the variable trade-off in time-frequency resolution made by the continuous wavelet transform. The temporal width of the time mask increases with the inverse of frequency. Similarly, when masking frequencies, more channels are masked at higher frequencies.
 
@@ -105,7 +117,7 @@ After pretraining, BrainBERT can be used as a feature extractor for a linear cla
 ***Decoding accuracy without fine-tuning***
 
 <div align="center">
-<img src="BrainBERT_Encode_Decode.png" alt="BrainBERT_Encode_Decode" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/BrainBERT_Encode_Decode.png" alt="BrainBERT_Encode_Decode" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 *Using a linear decoder for classifying sentence onsets either (left) directly with the neural recordings or (right) with BrainBERT (superlet input) embeddings. Each circle denotes a different electrode. The color shows the classification performance (see color map on right). Electrodes are shown on the left or right hemispheres. Chance has AUC of 0.5. Only the 947 held-out electrodes are shown. Using BrainBERT highlights far more relevant electrodes, provides much better decoding accuracy, and more convincingly identifies language-related regions in the superior temporal and frontal regions*
@@ -128,7 +140,7 @@ from the perceptual level while ensuring consistency between its consecutive fra
 Furthermore, NeuroClips also pioneers the exploration of Multi-fMRI Fusion for longer video reconstruction
 
 <div align="center">
-<img src="NeuroClips_Framework.png" alt="NeuroClips_Framework" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/NeuroClips_Framework.png" alt="NeuroClips_Framework" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 ### Method
@@ -203,7 +215,7 @@ $$
 ### Multi-fMRI Fusion
 
 <div align="center">
-<img src="Multi-fMRI_Fusion.png" alt="Multi-fMRI_Fusion" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/Multi-fMRI_Fusion.png" alt="Multi-fMRI_Fusion" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 *Visualization of Multi-fMRI fusion. With the semantic relevance measure, we can generate video clips up to 6s long without any additional training*
@@ -211,7 +223,7 @@ $$
 ### Video Reconstruction
 
 <div align="center">
-<img src="Video_Reconstruction.png" alt="Video_Reconstruction" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/Video_Reconstruction.png" alt="Video_Reconstruction" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 *Video reconstruction on the cc2017 dataset. On the left are the results of the comparison with previous studies, and on the right are additional comparisons with previous SOTA methods. Best viewed with zoom-in. As shown in the leftmost figure group, Mind-Video’s reconstruction fails to go for detail consistency on the character’s face, but our NeuroClips achieves an extremely high consistency*
@@ -219,7 +231,7 @@ $$
 ### Interpretation Results
 
 <div align="center">
-<img src="interpretation_result.png" alt="interpretation_result" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/interpretation_result.png" alt="interpretation_result" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 *Visualization of voxel weights for the first ridge regression layer for subject 1, with each voxel’s weight averaged and normalized to between 0 and 1 and we set the colorbar to 0.25-0.75 for a clear comparison*
@@ -229,13 +241,13 @@ $$
 ### GLMNet Encoder Framework
 
 <div align="center">
-<img src="GLMNet_Encoder.png" alt="GLMNet_Encoder" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/GLMNet_Encoder.png" alt="GLMNet_Encoder" width="90%" style="display: block; margin: 0 auto"/>
 </div>
 
 ### Reconstruction Presentation
 
 <p align="center">
-<img src="Reconstruction_Presentations.png" alt="Reconstruction_Presentations" width="90%" style="display: block; margin: 0 auto"/>
+<img src="./Figure/Reconstruction_Presentations.png" alt="Reconstruction_Presentations" width="90%" style="display: block; margin: 0 auto"/>
 </p>
 
 [Paper_Note](../Paper_Note.md)
